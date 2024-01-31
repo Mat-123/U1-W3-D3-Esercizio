@@ -3,7 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>To-Do List</title>
   </head>
-  <body></body>
+  <body>
+    <header><h1>To-Do List App</h1></header>
+    <main>
+      <form>
+        <div class="form-group">
+          <label for="activityname">Nome attività</label>
+          <input type="text" id="activityname" placeholder="Attività da inserire..." required />
+        </div>
+        <div class=".cards-form-generator">
+          <label for="datedel">Data e Ora</label>
+          <input type="date" id="datedel" placeholder="Inserire data e ora della cosegna..." required />
+        </div>
+        <div class=".cards-form-generator">
+          <label for="description">Descrizione dell'attività</label>
+          <textarea
+            type="text"
+            id="description"
+            placeholder="Inserisci una descrizione dell'attività da svolgere..."
+            required
+          ></textarea>
+        </div>
+        <button type="submit">Invia</button>
+        <button type="button" onclick="confirmAndReset(event)">resetta i campi</button>
+      </form>
+      <section>
+        <h2>Task da svolgere</h2>
+        <div id="cards-container"></div>
+      </section>
+    </main>
+    <footer>MMD&#169;</footer>
+    <script src="./js/generateCards.js"></script>
+  </body>
 </html>
